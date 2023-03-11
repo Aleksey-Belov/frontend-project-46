@@ -18,7 +18,7 @@ const genDiffСomparison = (data1, data2) => {
   const result = [];
   sortKey.map((key) => {
     if (!Object.hasOwn(data1, key)) {
-      //ключь одинаковые значения разные (+)
+      // ключь одинаковые значения разные (+)
       result.push(` + ${key}: ${data2[key]}`);
     } else if (!Object.hasOwn(data2, key)) {
       // есть в первом (-)
