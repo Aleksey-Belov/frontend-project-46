@@ -7,6 +7,7 @@ const extensionCheck = (filepath1, filepath2) => {
   const fileExtension1 = filepath1.split('.').at(-1);
   const fileExtension2 = filepath2.split('.').at(-1);
   if (!(fileExtension1 === 'json' && fileExtension2 === 'json')) return false;
+  return true;
 };
 
 const genDiffСomparison = (data1, data2) => {
@@ -31,15 +32,16 @@ const genDiffСomparison = (data1, data2) => {
       // ключь и значение одинаковые ()'
       result.push(`   ${key}: ${data1[key]}`);
     }
+    return result;
   });
-  const out = ['{', ...result, `}`].join('\n');
+  const out = ['{', ...result, '}'].join('\n');
   return out;
 };
 
 const genDiff = (filepath1, filepath2) => {
   if (extensionCheck(filepath1, filepath2) === false) {
     console.log('Incorrect format of transferred file');
-    return false;
+    return null;
   }
   const arrayOfPaths = [filepath1, filepath2];
   const test4 = arrayOfPaths.map((item) => {
@@ -50,7 +52,7 @@ const genDiff = (filepath1, filepath2) => {
   // console.log(test4);
   return genDiffСomparison(test4[0], test4[1]);
 };
-export { genDiff };
+export { genDiff, genDiffСomparison };
 
 // -------------------------------------------------------
 // 1. Работа с обсолютными путями и относительными +
