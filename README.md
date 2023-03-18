@@ -10,3 +10,6 @@
 
 3 шаг
 <a href="https://asciinema.org/a/j5nsPtuCQtqkq7j37Qk9RrqiZ" target="_blank"><img src="https://asciinema.org/a/j5nsPtuCQtqkq7j37Qk9RrqiZ.svg" /></a>
+
+5 шаг
+<a href="https://asciinema.org/a/iAyjFHFSFvOIgFuxa972zlAZq" target="_blank"><img src="https://asciinema.org/a/iAyjFHFSFvOIgFuxa972zlAZq.svg" /></a>
